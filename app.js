@@ -6,6 +6,7 @@ const ejs = require('ejs');
 const expressLayouts = require('express-ejs-layouts');
 
 const indexRouter = require('./routes/indexRouter');
+const searchUsername = require('./routes/searchUsername');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -26,6 +27,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/', indexRouter);
+app.use('/searchUsername', searchUsername);
 
 app.listen(PORT, () => {
     console.log(`Server listening on port: ${PORT}..`);

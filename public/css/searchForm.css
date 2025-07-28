@@ -1,0 +1,10 @@
+header {
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+}
+
+.search-username-form {
+    margin-left: auto;
+    display: flex;
+}
