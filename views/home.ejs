@@ -1,3 +1,4 @@
+<%- include('deleteAllUsernames') %>
 <% if (data && data.length > 0) { %>
     <ul>
         <% data.forEach((userObj) => { %>
@@ -5,3 +6,4 @@
         <% }) %>
     </ul> 
 <% } %>
+<script src="/js/handleDeleteAllUsernames.js"></script>

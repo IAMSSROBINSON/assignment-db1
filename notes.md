@@ -19,4 +19,5 @@
 
 
 ## add capacity to delete all usernames
-
+- add a button to the home view that deletes all usernames
+- 

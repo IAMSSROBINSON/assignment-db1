@@ -6,7 +6,8 @@ const ejs = require('ejs');
 const expressLayouts = require('express-ejs-layouts');
 
 const indexRouter = require('./routes/indexRouter');
-const searchUsername = require('./routes/searchUsername');
+const searchUsernameRouter = require('./routes/searchUsernameRouter');
+const deleteAllUsernamesRouter = require('./routes/deleteAllUsernamesRouter');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -27,8 +28,10 @@ app.use((req, res, next) => {
 })
 
 app.use('/', indexRouter);
-app.use('/searchUsername', searchUsername);
+app.use('/searchUsername', searchUsernameRouter);
+app.use('/deleteAllUsernames', deleteAllUsernamesRouter);
+
 
 app.listen(PORT, () => {
     console.log(`Server listening on port: ${PORT}..`);
-})
+});

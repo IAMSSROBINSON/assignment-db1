@@ -22,6 +22,10 @@ async function seed () {
    catch (error) {
     console.log('Could not connect database:', error);
    }
+   finally {
+    await pool.end();
+    console.log('Connection closed');
+   }
 }
 
 seed();
